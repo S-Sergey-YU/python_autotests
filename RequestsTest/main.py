@@ -1,7 +1,7 @@
 import requests
 
 URL = 'https://api.pokemonbattle.ru/v2'
-TOKEN = 'de4828625696701ae787c1eb2aa7cbd9'
+TOKEN = 'USER_TOKEN'
 HEADER = {'Content-Type' : 'application/json', 'trainer_token': TOKEN}
 'Создание покемона'
 body_create = {
@@ -38,4 +38,5 @@ body_battle = {
 
 respons_create = requests.post(url = f'{URL}/battle', headers = HEADER, json = body_battle)
 print(respons_create.status_code)
+
 print(respons_create.text)
